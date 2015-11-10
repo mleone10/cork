@@ -1,0 +1,20 @@
+main()
+read in tasks from file
+determine function
+  process options
+  perform function
+save tasks to file
+
+read tasks
+  open file
+  read and parse into arrays of tasks
+  close file
+  
+save tasks
+  open file
+  convert tasks in arrays to json objects, write to file
+  close file
+  
+one array of task structs
+reading in done using fscanf (see gist), store in struct
+need dynamically sized storage of tasks, tags, strings(?)
