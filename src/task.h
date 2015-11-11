@@ -17,6 +17,8 @@ typedef struct task_s task;
 
 int init_task(task* curTask);
 int task_out(task* curTask);
+short get_id(task* curTask);
+char* get_desc(task* curTask);
 int set_id(task* curTask, short id);
 int set_desc(task* curTask, char* desc);
 

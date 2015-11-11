@@ -23,6 +23,14 @@ int task_out(task* curTask) {
     return 0;
 }
 
+short get_id(task* curTask) {
+    return curTask->id;
+}
+
+char* get_desc(task* curTask) {
+    return curTask->desc;
+}
+
 int set_id(task* curTask, short id) {
     curTask->id = id;
     return 0;
