@@ -7,15 +7,25 @@
 */
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "task.h"
 #include "constants.h"
 
-int init_task(task* curTask) {
-    curTask = calloc(1, sizeof(task));
+task* init_task() {
+    task* curTask = (task*)calloc(1, sizeof(task));
     curTask->id = 0;
     curTask->desc = calloc(TASK_DESC_SIZE, sizeof(char));
 
-    return 0;
+    return curTask;
+}
+
+task* init_task_with_args(short id, char* desc) {
+    task* curTask = (task*)calloc(1, sizeof(task));
+    curTask->id = id;
+    curTask->desc = calloc(TASK_DESC_SIZE, sizeof(char));
+    strcpy(curTask->desc, desc);
+
+    return curTask;
 }
 
 int task_out(task* curTask) {
@@ -33,10 +43,12 @@ char* get_desc(task* curTask) {
 
 int set_id(task* curTask, short id) {
     curTask->id = id;
+
     return 0;
 }
 
 int set_desc(task* curTask, char* desc) {
     curTask->desc = desc;
+    
     return 0;
 }

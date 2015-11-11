@@ -15,7 +15,8 @@ struct task_s {
 
 typedef struct task_s task;
 
-int init_task(task* curTask);
+task* init_task();
+task* init_task_with_args(short id, char* desc);
 int task_out(task* curTask);
 short get_id(task* curTask);
 char* get_desc(task* curTask);

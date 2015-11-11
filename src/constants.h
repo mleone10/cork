@@ -9,6 +9,6 @@
 #define CONSTANTS_H
 
 #define TASK_ARRAY_SIZE 20
-#define TASK_DESC_SIZE 100
+#define TASK_DESC_SIZE 256
 
 #endif
