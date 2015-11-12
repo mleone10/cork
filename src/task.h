@@ -17,7 +17,8 @@ typedef struct task_s task;
 
 task* init_task();
 task* init_task_with_args(short id, char* desc);
-int task_out(task* curTask);
+char* to_string(task* curTask);
+char* get_json(task* curTask);
 short get_id(task* curTask);
 char* get_desc(task* curTask);
 int set_id(task* curTask, short id);

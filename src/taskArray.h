@@ -23,5 +23,6 @@ int add_task(taskArray* curArray, task* curTask);
 task* get_task(taskArray* curArray, int index);
 int get_num_tasks(taskArray* curArray);
 int print_task_array(taskArray* curArray);
+char* get_json_by_index(taskArray* curArray, int index);
 
 #endif

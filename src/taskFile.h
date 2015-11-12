@@ -11,5 +11,6 @@
 #include "taskArray.h"
 
 int load_tasks_from_file(char* filePath, taskArray* curArray);
+int save_tasks_to_file(char* filePath, taskArray* curArray);
 
 #endif

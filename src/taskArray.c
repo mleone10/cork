@@ -6,7 +6,11 @@
 *
 */
 #include <stdlib.h>
+#include <stdio.h>
+
+#include "constants.h"
 #include "taskArray.h"
+
 
 int init_task_array(taskArray* curArray) {
     curArray->taskList = calloc(TASK_ARRAY_SIZE, sizeof(task*));
@@ -34,8 +38,16 @@ int print_task_array(taskArray* curArray) {
     task* bufTask;
     for (int i = 0; i < get_num_tasks(curArray); i++) {
         bufTask = get_task(curArray, i);
-        task_out(bufTask);
+        printf("%s\n", to_string(bufTask));
     }
 
     return 0;
+}
+
+char* get_json_by_index(taskArray* curArray, int index) {
+    task* curTask = curArray->taskList[index];
+
+    char* jsonBuf = get_json(curTask);
+    
+    return jsonBuf;
 }
